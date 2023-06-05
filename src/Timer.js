@@ -12,7 +12,13 @@ export default function Timer() {
   const handleTimeInput = (event) => {
     if (event.target.value < 0) {
         setTimeInput(0);
-        alert('Please enter a positive number');
+        alert('Please enter a valid number');
+        return;
+    }
+
+    if (event.target.value <= 0.1) {
+        setTimeInput('');
+        alert('Please enter a number greater than 0');
         return;
     }
 
@@ -83,7 +89,7 @@ export default function Timer() {
       <header className='header'>Timer App</header>
       <h5 className='timer-display'>{ time }</h5>
       <input 
-        type='text' 
+        type='number' 
         className='timer-input' 
         placeholder={'Enter time in minutes'}
         value={ timeInput }
