@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import './styles/Timer.css';
 import timerOver from './audio/timer-over.mp3'
-import { type } from '@testing-library/user-event/dist/type';
 
 export default function Timer() {
   const [timeInput, setTimeInput] = useState('');
