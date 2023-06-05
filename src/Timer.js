@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import './styles/Timer.css';
 import timerOver from './audio/timer-over.mp3'
+import { type } from '@testing-library/user-event/dist/type';
 
 export default function Timer() {
   const [timeInput, setTimeInput] = useState('');
@@ -13,6 +14,12 @@ export default function Timer() {
     if (event.target.value < 0) {
         setTimeInput(0);
         alert('Please enter a positive number');
+        return;
+    }
+
+    if (typeof event.target.value === 'string' && isNaN(event.target.value)) {
+        setTimeInput('');
+        alert('Please enter a number');
         return;
     }
 
