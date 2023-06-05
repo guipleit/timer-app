@@ -49,21 +49,19 @@ button {
     color: #ffffff;
     cursor: pointer;
     margin-top: -2vmin;
+    width: 92px;
 }
 
 .start-btn {
     background-color: rgb(9, 97, 9);
-    width: 92px;
 }
 
 .reset-btn {
     background-color: rgb(74, 99, 189);
-    width: 92px;
 }
 
 .stop-btn {
     background-color: rgb(97, 9, 9);
-    width: 92px;
 }
 
 .buttons-row-time {
