@@ -18,7 +18,7 @@ export default function Timer() {
 
     if (event.target.value <= 0.1) {
         setTimeInput('');
-        alert('Please enter a number greater than 0');
+        alert('Please enter a number greater or equal to 1.');
         return;
     }
 
